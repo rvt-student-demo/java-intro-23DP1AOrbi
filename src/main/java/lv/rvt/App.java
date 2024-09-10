@@ -32,21 +32,48 @@ public class App
     //    System.out.println("there was");
     //    System.out.println("a program");
 
+        //Input uzdevums
 
     // Izveido skaneri vienu reizi un pielieto visā programmā
 
-    Scanner scanner = new Scanner(System.in);
+    // Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Write your name:");
-    String name = scanner.nextLine();
+    // System.out.println("Write your name:");
+    // String name = scanner.nextLine();
 
-    System.out.println("Write your last name:");
-    String lastName = scanner.nextLine();
+    // System.out.println("Write your last name:");
+    // String lastName = scanner.nextLine();
 
-    System.out.println("Write your group:");
-    String group = scanner.nextLine();
+    // System.out.println("Write your group:");
+    // String group = scanner.nextLine();
 
-    System.out.println("Yello " + name + " " + lastName + " from group " + group);
+    // System.out.println("Yello " + name + " " + lastName + " from group " + group);
+    
+        // Scanner scanner = new Scanner(System.in);
+
+        // // Saņēmām vērtīb kā string vērtību
+        // String input = scanner.nextLine();
+
+        // // Veidojam int datu tip un konvertējam input uz in datu tipu 
+        // int inputAsInt = Integer.valueOf(input);
+
+        // System.out.println(inputAsInt * 10);
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Saņēmām vērtīb kā string vērtību
+        String cipars1 = scanner.nextLine();
+
+        // Veidojam int datu tip un konvertējam input uz in datu tipu 
+        int skaitlis1 = Integer.valueOf(cipars1);
+
+        // option 2 
+        int skaitlis2 = Integer.valueOf(scanner.nextLine());
+
+        System.out.println(skaitlis1 * skaitlis2);
+
     }
+
+
 
 }
