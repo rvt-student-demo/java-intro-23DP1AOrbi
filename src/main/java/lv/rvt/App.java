@@ -9,23 +9,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    //    System.out.println("Yello");
-    //    String name = "Juris";
-    //    int age = 20;
-    //    boolean isOnline = true;
-
-    //    // My code starts here
-
-    //    String name1 = "Laima";
-    //    int age1 = 17;
-
-
-    //    System.out.println(name1);
-    //    System.out.println(age1);
-    //    System.out.println(isOnline);
-
-    //    // Code ends
-
+    
 
     //    // Once Upon a Time
     //    System.out.println("Once upon a time");
@@ -33,21 +17,6 @@ public class App
     //    System.out.println("a program");
 
         //Input uzdevums
-
-    // Izveido skaneri vienu reizi un pielieto visā programmā
-
-    // Scanner scanner = new Scanner(System.in);
-
-    // System.out.println("Write your name:");
-    // String name = scanner.nextLine();
-
-    // System.out.println("Write your last name:");
-    // String lastName = scanner.nextLine();
-
-    // System.out.println("Write your group:");
-    // String group = scanner.nextLine();
-
-    // System.out.println("Yello " + name + " " + lastName + " from group " + group);
     
         // Scanner scanner = new Scanner(System.in);
 
@@ -59,18 +28,40 @@ public class App
 
         // System.out.println(inputAsInt * 10);
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // // Saņēmām vērtīb kā string vērtību
+        // String cipars1 = scanner.nextLine();
+
+        // // Veidojam int datu tip un konvertējam input uz in datu tipu 
+        // int skaitlis1 = Integer.valueOf(cipars1);
+
+        // // option 2 
+        // int skaitlis2 = Integer.valueOf(scanner.nextLine());
+
+        // System.out.println(skaitlis1 * skaitlis2);
+
+        // Scanner scanner = new Scanner(System.in);
+
+        // int cipars1 = Integer.valueOf(scanner.nextLine());
+        // int cipars2 = Integer.valueOf(scanner.nextLine());
+        // int cipars3 = Integer.valueOf(scanner.nextLine());
+
+        // System.out.println(cipars1 + cipars2 + cipars3);
+        // System.out.println(cipars1 * cipars2 * cipars3);
+        // System.out.println((cipars1 + cipars2 + cipars3)/3.0);
+
+        // // x++ == x = x + 1
+
         Scanner scanner = new Scanner(System.in);
 
-        // Saņēmām vērtīb kā string vērtību
-        String cipars1 = scanner.nextLine();
+        int number = Integer.valueOf(scanner.nextLine());
 
-        // Veidojam int datu tip un konvertējam input uz in datu tipu 
-        int skaitlis1 = Integer.valueOf(cipars1);
+        if (number > 120) {
+            System.out.println("Speeding ticket!");   
+        }
 
-        // option 2 
-        int skaitlis2 = Integer.valueOf(scanner.nextLine());
-
-        System.out.println(skaitlis1 * skaitlis2);
+        
 
     }
 
