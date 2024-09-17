@@ -53,28 +53,60 @@ public class App
 
         // // x++ == x = x + 1
 
+        // and -> &&
+        // or -> ||
+        // not -> !
+
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Give the first number:");
+        // int number1 = Integer.valueOf(scanner.nextLine());
+
+        // System.out.println("Give the second number:");
+        // int number2 = Integer.valueOf(scanner.nextLine());
+
+        // if (number1 > number2) {
+        //     System.out.println("Greater number is: " + number1);   
+        // }
+        
+        // else if (number1 == number2) {
+        //     System.out.println("The numbers are equal!");
+        // }
+
+        // else {
+        //     System.out.println("Greater number is: " + number2);
+        // }
+        
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give the first number:");
-        int number1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give points [0-100]:");
+        int number = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Give the second number:");
-        int number2 = Integer.valueOf(scanner.nextLine());
-
-        if (number1 > number2) {
-            System.out.println("Greater number is: " + number1);   
+        if (number < 0) {
+            System.out.println("Grade: impossible!");
         }
-        
-        else if (number1 == number2) {
-            System.out.println("The numbers are equal!");
+        else if ( 0 <= number  && number <= 49) {
+            System.out.println("Grade: failed");
         }
-
-        else {
-            System.out.println("Greater number is: " + number2);
+        else if (number >= 50 && number <= 59) {
+            System.out.println("Grade: 1");
         }
-        
-
-        
+        else if (number >= 60 && number <= 69) {
+            System.out.println("Grade: 2");
+        }
+        else if (number >= 70 && number <= 79) {
+            System.out.println("Grade: 3");
+        }
+        else if (number >= 80 && number <= 89) {
+            System.out.println("Grade: 4");
+        }
+        else if (number >= 90 && number <= 100) {
+            System.out.println("Grade: 5");
+        }
+        else if (number > 100) {
+            System.out.println("Grade: incredible!");  
+        }
 
     }
 
