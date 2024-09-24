@@ -89,14 +89,22 @@ public class App
         // System.out.println("Number of numbers: " + numNumbers);
         // System.out.println("Sum of the numbers: " + sum);
 
+        // int number = Integer.valueOf(scanner.nextLine());
+
+        // for (int i = number; i <= 100; i++) {
+        //     System.out.println(i);
+        // }
+
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Last number?");
         int number = Integer.valueOf(scanner.nextLine());
+        int sum = 0; 
 
-        for (int i = number; i <= 100; i++) {
-            System.out.println(i);
+        for (int i = 1; i < number + 1; i++) {
+            sum += i;
         }
-
+        System.out.println("The sum is " + sum);
     }
 
 
