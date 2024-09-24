@@ -10,73 +10,11 @@ public class App
     public static void main( String[] args )
     {
     
-
-    //    // Once Upon a Time
-    //    System.out.println("Once upon a time");
-    //    System.out.println("there was");
-    //    System.out.println("a program");
-
-        //Input uzdevums
-    
-        // Scanner scanner = new Scanner(System.in);
-
-        // // Saņēmām vērtīb kā string vērtību
-        // String input = scanner.nextLine();
-
-        // // Veidojam int datu tip un konvertējam input uz in datu tipu 
-        // int inputAsInt = Integer.valueOf(input);
-
-        // System.out.println(inputAsInt * 10);
-
-        // Scanner scanner = new Scanner(System.in);
-
-        // // Saņēmām vērtīb kā string vērtību
-        // String cipars1 = scanner.nextLine();
-
-        // // Veidojam int datu tip un konvertējam input uz in datu tipu 
-        // int skaitlis1 = Integer.valueOf(cipars1);
-
-        // // option 2 
-        // int skaitlis2 = Integer.valueOf(scanner.nextLine());
-
-        // System.out.println(skaitlis1 * skaitlis2);
-
-        // Scanner scanner = new Scanner(System.in);
-
-        // int cipars1 = Integer.valueOf(scanner.nextLine());
-        // int cipars2 = Integer.valueOf(scanner.nextLine());
-        // int cipars3 = Integer.valueOf(scanner.nextLine());
-
-        // System.out.println(cipars1 + cipars2 + cipars3);
-        // System.out.println(cipars1 * cipars2 * cipars3);
-        // System.out.println((cipars1 + cipars2 + cipars3)/3.0);
-
         // // x++ == x = x + 1
 
         // and -> &&
         // or -> ||
         // not -> !
-
-        // Scanner scanner = new Scanner(System.in);
-
-        // System.out.println("Give the first number:");
-        // int number1 = Integer.valueOf(scanner.nextLine());
-
-        // System.out.println("Give the second number:");
-        // int number2 = Integer.valueOf(scanner.nextLine());
-
-        // if (number1 > number2) {
-        //     System.out.println("Greater number is: " + number1);   
-        // }
-        
-        // else if (number1 == number2) {
-        //     System.out.println("The numbers are equal!");
-        // }
-
-        // else {
-        //     System.out.println("Greater number is: " + number2);
-        // }
-        
 
         // Scanner scanner = new Scanner(System.in);
 
@@ -108,29 +46,46 @@ public class App
         //     System.out.println("Grade: incredible!");  
         // }
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Value of the gift?");
+        // int number = Integer.valueOf(scanner.nextLine());
+
+        // if (number < 5000) {
+        //     System.out.println("No tax!");
+        // }
+        // else if (number >= 5000 && number <= 25000) {
+        //     System.out.println("Tax: " + (100 + (number - 5000) * 0.08));
+        // }
+        // else if (number >= 25000 && number <= 55000) {
+        //     System.out.println("Tax: " + (1700 + (number - 25000) * 0.10));
+        // }
+        // else if (number >= 55000 && number <= 200000) {
+        //     System.out.println("Tax: " + (4700 + (number - 55000) * 0.12));
+        // }
+        // else if (number >= 200000 && number <= 1000000) {
+        //     System.out.println("Tax: " + (22100 + (number - 200000) * 0.15));
+        // }
+        // else if (number > 1000000) {
+        //     System.out.println("Tax: " + (142100 + (number - 1000000) * 0.17));  
+        // }
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Value of the gift?");
-        int number = Integer.valueOf(scanner.nextLine());
+        int numNumbers = 0;
+        int sum = 0;
 
-        if (number < 5000) {
-            System.out.println("No tax!");
+        while (true) {
+            System.out.println("Give a number:");
+            int number = Integer.valueOf(scanner.nextLine());
+
+            if (number == 0) {
+                break;
+            }
+            numNumbers += 1;
+            sum = number + sum;    
         }
-        else if (number >= 5000 && number <= 25000) {
-            System.out.println("Tax: " + (100 + (number - 5000) * 0.08));
-        }
-        else if (number >= 25000 && number <= 55000) {
-            System.out.println("Tax: " + (1700 + (number - 25000) * 0.10));
-        }
-        else if (number >= 55000 && number <= 200000) {
-            System.out.println("Tax: " + (4700 + (number - 55000) * 0.12));
-        }
-        else if (number >= 200000 && number <= 1000000) {
-            System.out.println("Tax: " + (22100 + (number - 200000) * 0.15));
-        }
-        else if (number > 1000000) {
-            System.out.println("Tax: " + (142100 + (number - 1000000) * 0.17));  
-        }
+        System.out.println("Number of numbers: " + numNumbers);
+        System.out.println("Sum of the numbers: " + sum);
     }
 
 
