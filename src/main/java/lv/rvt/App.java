@@ -69,23 +69,34 @@ public class App
         // else if (number > 1000000) {
         //     System.out.println("Tax: " + (142100 + (number - 1000000) * 0.17));  
         // }
+
+
+        // Scanner scanner = new Scanner(System.in);
+
+        // int numNumbers = 0;
+        // int sum = 0;
+
+        // while (true) {
+        //     System.out.println("Give a number:");
+        //     int number = Integer.valueOf(scanner.nextLine());
+
+        //     if (number == 0) {
+        //         break;
+        //     }
+        //     numNumbers += 1;
+        //     sum = number + sum;    
+        // }
+        // System.out.println("Number of numbers: " + numNumbers);
+        // System.out.println("Sum of the numbers: " + sum);
+
         Scanner scanner = new Scanner(System.in);
 
-        int numNumbers = 0;
-        int sum = 0;
+        int number = Integer.valueOf(scanner.nextLine());
 
-        while (true) {
-            System.out.println("Give a number:");
-            int number = Integer.valueOf(scanner.nextLine());
-
-            if (number == 0) {
-                break;
-            }
-            numNumbers += 1;
-            sum = number + sum;    
+        for (int i = number; i <= 100; i++) {
+            System.out.println(i);
         }
-        System.out.println("Number of numbers: " + numNumbers);
-        System.out.println("Sum of the numbers: " + sum);
+
     }
 
 
