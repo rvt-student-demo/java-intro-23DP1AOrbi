@@ -18,61 +18,6 @@ public class App
 
         // Scanner scanner = new Scanner(System.in);
 
-        // System.out.println("Give points [0-100]:");
-        // int number = Integer.valueOf(scanner.nextLine());
-
-        // if (number < 0) {
-        //     System.out.println("Grade: impossible!");
-        // }
-        // else if ( 0 <= number  && number <= 49) {
-        //     System.out.println("Grade: failed");
-        // }
-        // else if (number >= 50 && number <= 59) {
-        //     System.out.println("Grade: 1");
-        // }
-        // else if (number >= 60 && number <= 69) {
-        //     System.out.println("Grade: 2");
-        // }
-        // else if (number >= 70 && number <= 79) {
-        //     System.out.println("Grade: 3");
-        // }
-        // else if (number >= 80 && number <= 89) {
-        //     System.out.println("Grade: 4");
-        // }
-        // else if (number >= 90 && number <= 100) {
-        //     System.out.println("Grade: 5");
-        // }
-        // else if (number > 100) {
-        //     System.out.println("Grade: incredible!");  
-        // }
-
-        // Scanner scanner = new Scanner(System.in);
-
-        // System.out.println("Value of the gift?");
-        // int number = Integer.valueOf(scanner.nextLine());
-
-        // if (number < 5000) {
-        //     System.out.println("No tax!");
-        // }
-        // else if (number >= 5000 && number <= 25000) {
-        //     System.out.println("Tax: " + (100 + (number - 5000) * 0.08));
-        // }
-        // else if (number >= 25000 && number <= 55000) {
-        //     System.out.println("Tax: " + (1700 + (number - 25000) * 0.10));
-        // }
-        // else if (number >= 55000 && number <= 200000) {
-        //     System.out.println("Tax: " + (4700 + (number - 55000) * 0.12));
-        // }
-        // else if (number >= 200000 && number <= 1000000) {
-        //     System.out.println("Tax: " + (22100 + (number - 200000) * 0.15));
-        // }
-        // else if (number > 1000000) {
-        //     System.out.println("Tax: " + (142100 + (number - 1000000) * 0.17));  
-        // }
-
-
-        // Scanner scanner = new Scanner(System.in);
-
         // int numNumbers = 0;
         // int sum = 0;
 
@@ -107,34 +52,47 @@ public class App
         // System.out.println("The sum is " + sum);
 
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Give numbers:");
+        // int sum = 0;
+        // int i = 0;
+        // int odd = 0;
+
+        // while (true) {
+        //     int number = Integer.valueOf(scanner.nextLine());
+            
+        //     if (number == -1) {
+        //         break;
+        //     }
+
+        //     if (number % 2 == 1) {
+        //         odd++;
+        //     }
+
+        //     sum += number;
+        //     i++;
+        // }
+        
+        // System.out.println("Thx! Bye!");
+        // System.out.println("Sum: " + sum);
+        // System.out.println("Numbers: " + i);
+        // System.out.println("Average: " + ( (double) sum/i));
+        // System.out.println("Even: " + (i-odd));
+        // System.out.println("Odd: " + odd);
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give numbers:");
-        int sum = 0;
-        int i = 0;
-        int odd = 0;
+        System.out.println("How many times?");
 
-        while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
-            
-            if (number == -1) {
-                break;
-            }
-
-            if (number % 2 == 1) {
-                odd++;
-            }
-
-            sum += number;
-            i++;
-        }
+        int sk = Integer.valueOf(scanner.nextLine());
         
-        System.out.println("Thx! Bye!");
-        System.out.println("Sum: " + sum);
-        System.out.println("Numbers: " + i);
-        System.out.println("Average: " + ( (double) sum/i));
-        System.out.println("Even: " + (i-odd));
-        System.out.println("Odd: " + odd);
+        for (int i = 0 ; i < sk ; i++ ) {
+            printText();
+        }
+    }
+    public static void printText() {
+        System.out.println("In a hole in the ground there lived a method");
     }
 
 
