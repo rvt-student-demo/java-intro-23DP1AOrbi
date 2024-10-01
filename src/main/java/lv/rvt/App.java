@@ -95,16 +95,46 @@ public class App
         //     System.out.println(i);
         // }
 
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Last number?");
+        // int number = Integer.valueOf(scanner.nextLine());
+        // int sum = 0; 
+
+        // for (int i = 1; i < number + 1; i++) {
+        //     sum += i;
+        // }
+        // System.out.println("The sum is " + sum);
+
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Last number?");
-        int number = Integer.valueOf(scanner.nextLine());
-        int sum = 0; 
+        System.out.println("Give numbers:");
+        int sum = 0;
+        int i = 0;
+        int odd = 0;
 
-        for (int i = 1; i < number + 1; i++) {
-            sum += i;
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
+            
+            if (number == -1) {
+                break;
+            }
+
+            if (number % 2 == 1) {
+                odd++;
+            }
+
+            sum += number;
+            i++;
         }
-        System.out.println("The sum is " + sum);
+        
+        System.out.println("Thx! Bye!");
+        System.out.println("Sum: " + sum);
+        System.out.println("Numbers: " + i);
+        System.out.println("Average: " + ( (double) sum/i));
+        System.out.println("Even: " + (i-odd));
+        System.out.println("Odd: " + odd);
     }
 
 
