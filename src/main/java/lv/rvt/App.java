@@ -81,20 +81,38 @@ public class App
         // System.out.println("Even: " + (i-odd));
         // System.out.println("Odd: " + odd);
 
-        Scanner scanner = new Scanner(System.in);
+        // //////////////////
 
-        System.out.println("How many times?");
+    //     Scanner scanner = new Scanner(System.in);
 
-        int sk = Integer.valueOf(scanner.nextLine());
+    //     System.out.println("How many times?");
+
+    //     int sk = Integer.valueOf(scanner.nextLine());
         
-        for (int i = 0 ; i < sk ; i++ ) {
-            printText();
+    //     for (int i = 0 ; i < sk ; i++ ) {
+    //         printText();
+    //     }
+    // }
+    // public static void printText() {
+    //     System.out.println("In a hole in the ground there lived a method");
+    // }
+
+    Scanner scanner = new Scanner(System.in);
+
+    int sak = Integer.valueOf(scanner.nextLine());
+    int beig = Integer.valueOf(scanner.nextLine());
+
+       divisibleByThreeInRange(sak ,  beig);
+    }
+
+    public static void divisibleByThreeInRange(int beginning, int end) {
+
+        for (int i = beginning ;  i <= end ; i++) {
+            if (i % 3 == 0) {
+                System.out.println(i);
+            }
         }
     }
-    public static void printText() {
-        System.out.println("In a hole in the ground there lived a method");
-    }
-
 
 
 }
