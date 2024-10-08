@@ -18,42 +18,6 @@ public class App
 
         // Scanner scanner = new Scanner(System.in);
 
-        // int numNumbers = 0;
-        // int sum = 0;
-
-        // while (true) {
-        //     System.out.println("Give a number:");
-        //     int number = Integer.valueOf(scanner.nextLine());
-
-        //     if (number == 0) {
-        //         break;
-        //     }
-        //     numNumbers += 1;
-        //     sum = number + sum;    
-        // }
-        // System.out.println("Number of numbers: " + numNumbers);
-        // System.out.println("Sum of the numbers: " + sum);
-
-        // int number = Integer.valueOf(scanner.nextLine());
-
-        // for (int i = number; i <= 100; i++) {
-        //     System.out.println(i);
-        // }
-
-        // Scanner scanner = new Scanner(System.in);
-
-        // System.out.println("Last number?");
-        // int number = Integer.valueOf(scanner.nextLine());
-        // int sum = 0; 
-
-        // for (int i = 1; i < number + 1; i++) {
-        //     sum += i;
-        // }
-        // System.out.println("The sum is " + sum);
-
-
-        // Scanner scanner = new Scanner(System.in);
-
         // System.out.println("Give numbers:");
         // int sum = 0;
         // int i = 0;
@@ -97,22 +61,64 @@ public class App
     //     System.out.println("In a hole in the ground there lived a method");
     // }
 
-    Scanner scanner = new Scanner(System.in);
+    ///////////////////
+    // Scanner scanner = new Scanner(System.in);
 
-    int sak = Integer.valueOf(scanner.nextLine());
-    int beig = Integer.valueOf(scanner.nextLine());
+    // int sak = Integer.valueOf(scanner.nextLine());
+    // int beig = Integer.valueOf(scanner.nextLine());
 
-       divisibleByThreeInRange(sak ,  beig);
+    //    divisibleByThreeInRange(sak ,  beig);
+    // }
+
+    // public static void divisibleByThreeInRange(int beginning, int end) {
+    //     for (int i = beginning ;  i <= end ; i++) {
+    //         if (i % 3 == 0) {
+    //             System.out.println(i);
+    //         }
+    //     }
+    // }
+    
+
+    printStars(5);
+    printStars(3);
+    printStars(9);
+
+    System.out.println();
+
+    printSquare(4);
+
+    System.out.println();
+
+    printRectangle(17, 3);
+
+    System.out.println();
+
+    printTriangle(4);
+
     }
 
-    public static void divisibleByThreeInRange(int beginning, int end) {
+    public static void printStars(int num) {
+        for (int i = 1; i <= num ; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
 
-        for (int i = beginning ;  i <= end ; i++) {
-            if (i % 3 == 0) {
-                System.out.println(i);
-            }
+    public static void printSquare(int size) {
+        for (int i = 1 ; i <= size; i++) {
+            printStars(size);
+        }
+
+    }
+    public static void printRectangle(int width, int height) {
+        for (int i = 1; i <= height; i++) {
+            printStars(width);
         }
     }
-
+    public static void printTriangle(int size) {
+        for (int i = 1; i <= size ; i++) {
+            printStars(i);
+        }
+    }
 
 }
