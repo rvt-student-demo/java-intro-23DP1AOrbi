@@ -45,16 +45,30 @@ public class App
             }
             intNum.add(number);
         }
+
         System.out.print("From where? ");
         int begin = Integer.valueOf(scan.nextLine());
 
+        while (begin >= intNum.size()) {
+            System.out.println("Index needs to be within range");
+            int start = Integer.valueOf(scan.nextLine());
+            begin = start;
+        }
+
         System.out.print("To where? ");
         int end = Integer.valueOf(scan.nextLine());
+        
+        while (end >= intNum.size()) {
+            System.out.println("Index needs to be within range");
+            int fin = Integer.valueOf(scan.nextLine());
+            end = fin;
+        }
+        System.out.println();
 
         for (int i = begin ; i <= end ; i++) {
                 System.out.println(intNum.get(i));
             }
-            
+
         }
 
     }
