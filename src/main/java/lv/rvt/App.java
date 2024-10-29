@@ -9,6 +9,29 @@ public class App
 {
     public static void main( String[] args )
     {
+        // Account matthewsAccount = new Account("Matthew's account", 1000);
+        // Account myAccount = new Account("My account", 0);
+
+        // System.out.println("Initial state");
+        // System.out.println(matthewsAccount);
+        // System.out.println(myAccount);
+
+        // matthewsAccount.withdraw(100.0);
+        // myAccount.deposit(100.0);
+
+
+        // System.out.println("End state");
+        // System.out.println(matthewsAccount);
+        // System.out.println(myAccount);
+
+        // Person ada = new Person("Ada");
+        // Person antti = new Person("Antti");
+        // Person martin = new Person("Martin");
+
+        // ada.printPerson();
+        // antti.printPerson();
+        // martin.printPerson();
+        printProduct();
 
         // and -> &&
         // or -> ||
@@ -21,68 +44,30 @@ public class App
         // // Cik ir elementu masīvā?
         // intList.size();
 
+        // masivs.length()
+        // // cik elementu masīvā? (priekš parasta masīva)
 
+        ///////
 
         // Scanner scan = new Scanner(System.in);
-        // ArrayList<Integer> intNum = new ArrayList<>();
+
+        // int howManyTimes = Integer.valueOf(scan.nextLine());
+
+        // int count = 0;
 
         // while (true) {
-        //     int number = Integer.valueOf(scan.nextLine());
-        //     if (number == -1) {
+        //     String[] name = new String[howManyTimes];
+        //     int[] year = new int[howManyTimes];
+
+        //     String input = scan.nextLine();
+
+        //     if (input.isEmpty()) {
         //         break;
         //     }
-        //     intNum.add(number);
+
+
+        //     count++;
         // }
-
-        // System.out.print("From where? ");
-        // int begin = Integer.valueOf(scan.nextLine());
-
-        // while (begin >= intNum.size() || begin < 0) {
-        //     System.out.println("Index needs to be within range");
-        //     int start = Integer.valueOf(scan.nextLine());
-        //     begin = start;
-        // }
-
-        // System.out.print("To where? ");
-        // int end = Integer.valueOf(scan.nextLine());
-        
-        // while (end >= intNum.size() || begin < 0) {
-        //     System.out.println("Index needs to be within range");
-        //     int fin = Integer.valueOf(scan.nextLine());
-        //     end = fin;
-        // }
-        // System.out.println();
-
-        // for (int i = begin ; i <= end ; i++) {
-        //         System.out.println(intNum.get(i));
-        //     }
-
-        
-        ArrayList<Integer> numbers = new ArrayList<>();
-
-            numbers.add(3);
-            numbers.add(2);
-            numbers.add(6);
-            numbers.add(-1);
-            numbers.add(5);
-            numbers.add(1);
-
-            System.out.println("The numbers in the range [0, 5]");
-            printNumbersInRange(numbers, 0, 5);
-
-            System.out.println("The numbers in the range [3, 10]");
-            printNumbersInRange(numbers, 3, 10);
-        
-
-        }
-
-        public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
-
-            for (int x : numbers) {
-                if (x >= lowerLimit && x <= upperLimit) {
-                    System.out.println(x);
-                }
-            }
         }
 
     }
