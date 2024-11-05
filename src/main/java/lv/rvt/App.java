@@ -9,24 +9,35 @@ import java.util.*;
 public class App 
 {
     public static void main( String[] args ) {
-        
-        Person per1 = new Person("John");
-        per1.printPerson();
 
-        per1.growOlder();
-        per1.growOlder();
-        per1.growOlder();
+        DecreasingCounter counter = new DecreasingCounter(100);
 
-        per1.printPerson();
+        counter.printValue();
 
-        for (int i = 0; i < 35 ; i++) {
-            per1.growOlder();
-        }
+        counter.reset();
+        counter.printValue();
 
-        per1.printPerson();
-        
-        // Product new1 = new Product("Apple", 1.1, 13);
-        // new1.printProduct();
+        counter.decrement();
+        counter.printValue();
+
+
+        /////////
+
+        // Person per1 = new Person("John");
+        // per1.printPerson();
+
+        // per1.growOlder();
+        // per1.growOlder();
+        // per1.growOlder();
+
+        // per1.printPerson();
+
+        // for (int i = 0; i < 35 ; i++) {
+        //     per1.growOlder();
+        // }
+
+        // per1.printPerson();
+
 
         // and -> &&
         // or -> ||
