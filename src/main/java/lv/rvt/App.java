@@ -8,34 +8,25 @@ import java.util.*;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
-        // Account matthewsAccount = new Account("Matthew's account", 1000);
-        // Account myAccount = new Account("My account", 0);
-
-        // System.out.println("Initial state");
-        // System.out.println(matthewsAccount);
-        // System.out.println(myAccount);
-
-        // matthewsAccount.withdraw(100.0);
-        // myAccount.deposit(100.0);
-
-
-        // System.out.println("End state");
-        // System.out.println(matthewsAccount);
-        // System.out.println(myAccount);
-
-        // Person ada = new Person("Ada");
-        // Person antti = new Person("Antti");
-        // Person martin = new Person("Martin");
-
-        // ada.printPerson();
-        // antti.printPerson();
-        // martin.printPerson();
-
+    public static void main( String[] args ) {
         
-        Product new1 = new Product("Apple", 1.1, 13);
-        new1.printProduct();
+        Person per1 = new Person("John");
+        per1.printPerson();
+
+        per1.growOlder();
+        per1.growOlder();
+        per1.growOlder();
+
+        per1.printPerson();
+
+        for (int i = 0; i < 35 ; i++) {
+            per1.growOlder();
+        }
+
+        per1.printPerson();
+        
+        // Product new1 = new Product("Apple", 1.1, 13);
+        // new1.printProduct();
 
         // and -> &&
         // or -> ||
@@ -51,27 +42,6 @@ public class App
         // masivs.length()
         // // cik elementu masīvā? (priekš parasta masīva)
 
-        ///////
-
-        // Scanner scan = new Scanner(System.in);
-
-        // int howManyTimes = Integer.valueOf(scan.nextLine());
-
-        // int count = 0;
-
-        // while (true) {
-        //     String[] name = new String[howManyTimes];
-        //     int[] year = new int[howManyTimes];
-
-        //     String input = scan.nextLine();
-
-        //     if (input.isEmpty()) {
-        //         break;
-        //     }
-
-
-        //     count++;
-        // }
         }
 
     }
