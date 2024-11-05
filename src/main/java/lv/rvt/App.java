@@ -1,5 +1,6 @@
 package lv.rvt;
 
+import java.applet.Applet;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
@@ -31,7 +32,10 @@ public class App
         // ada.printPerson();
         // antti.printPerson();
         // martin.printPerson();
-        printProduct();
+
+        
+        Product new1 = new Product("Apple", 1.1, 13);
+        new1.printProduct();
 
         // and -> &&
         // or -> ||

@@ -11,7 +11,7 @@ public class Product {
         this.quantity = initalQuantity;
     }
     public void printProduct() {
-        System.out.println(name + ", price " + price + quantity + " pcs");
+        System.out.println(name + ", price " + price + ", "+ quantity + " pcs");
     }
 
 }
