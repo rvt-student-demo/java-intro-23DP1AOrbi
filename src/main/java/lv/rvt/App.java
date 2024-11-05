@@ -10,15 +10,26 @@ public class App
 {
     public static void main( String[] args ) {
 
-        DecreasingCounter counter = new DecreasingCounter(100);
+        Agent bond =  new Agent("James", "Bond");
 
-        counter.printValue();
+        bond.toString(); // prints nothing
+        System.out.println(bond);
 
-        counter.reset();
-        counter.printValue();
+        Agent ionic = new Agent("Ionic", "Bond");
+        System.out.println(ionic);
 
-        counter.decrement();
-        counter.printValue();
+
+
+        // Animal animal1 = new Animal("cat");
+        // Animal animal2 = new Animal("dog");
+
+        // System.out.println(
+        //     animal1
+        // );
+        // System.out.println(
+        //     animal2
+        // );
+
 
 
         /////////
