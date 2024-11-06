@@ -10,45 +10,81 @@ public class App
 {
     public static void main( String[] args ) {
 
-        Agent bond =  new Agent("James", "Bond");
+        // System.out.println(1%2);
 
-        bond.toString(); // prints nothing
-        System.out.println(bond);
+        Scanner Scan = new Scanner(System.in);
 
-        Agent ionic = new Agent("Ionic", "Bond");
-        System.out.println(ionic);
+        Statistics stats = new Statistics();
+        Statistics even = new Statistics();
+        Statistics odd = new Statistics();
+        
+        while (true) {
+            int num = Integer.valueOf(Scan.nextLine());
 
+            if (num == -1) {
+                break;
+            }
 
+            if (num % 2 == 1) {
+                odd.addNumber(num);
+            }
 
-        // Animal animal1 = new Animal("cat");
-        // Animal animal2 = new Animal("dog");
+            if (num % 2 == 0) {
+                even.addNumber(num);
+            }
 
-        // System.out.println(
-        //     animal1
-        // );
-        // System.out.println(
-        //     animal2
-        // );
+            stats.addNumber(num);
+        }
 
+        System.out.println("Sum: " +(int)stats.sum());
+        System.out.println("Sum of even numbers: " + (int)even.sum());
+        System.out.println("Sum of odd numbers: " + (int)odd.sum());
+  
 
+        // Scanner Scan = new Scanner(System.in);
+        // Statistics stats = new Statistics();
 
-        /////////
+        // int num = Integer.valueOf(Scan.nextLine());
 
-        // Person per1 = new Person("John");
-        // per1.printPerson();
-
-        // per1.growOlder();
-        // per1.growOlder();
-        // per1.growOlder();
-
-        // per1.printPerson();
-
-        // for (int i = 0; i < 35 ; i++) {
-        //     per1.growOlder();
+        // while (num != -1) {
+        //     stats.addNumber(num);
+        //     int num1 = Integer.valueOf(Scan.nextLine());
+        //     num = num1;
         // }
+        // System.out.println((int)stats.sum());
 
-        // per1.printPerson();
 
+
+        // Statistics statistics = new Statistics();
+        // statistics.addNumber(3);
+        // statistics.addNumber(5);
+        // statistics.addNumber(1);
+        // statistics.addNumber(2);
+        // System.out.println("Count: " + statistics.getCount());
+        // System.out.println("Sum: " + statistics.sum());
+        // System.out.println("Average: " + statistics.average());
+    
+
+
+        // Agent bond =  new Agent("James", "Bond");
+
+        // bond.toString(); // prints nothing
+        // System.out.println(bond);
+
+        // Agent ionic = new Agent("Ionic", "Bond");
+        // System.out.println(ionic);
+
+
+        // Person per1 = new Person("Anthony");
+        // per1.setHeight(165);
+        // per1.setWeight(65);
+
+        // System.out.println(per1.bodyMassIndex());
+
+
+
+        
+        ///////////////////////
 
         // and -> &&
         // or -> ||
