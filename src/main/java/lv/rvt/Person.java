@@ -6,10 +6,10 @@ public class Person {
     private int weight;
     private int height;
 
-    public Person(String initialName, int age2) {
-        this.age = age2;
-        this.weight = 0;
-        this.height = 0;
+    public Person(String initialName, int initialAge, int initialWeight, int initialHeight) {
+        this.age = initialAge;
+        this.weight = initialWeight;
+        this.height = initialHeight;
         this.name = initialName;
     }
 
@@ -55,6 +55,10 @@ public class Person {
     public double bodyMassIndex() {
         double heigthPerHundred = this.height / 100.0;
         return this.weight / (heigthPerHundred * heigthPerHundred);
+    }
+
+    public void setAge(int ageNow) {
+        this.age = ageNow;
     }
 
 }
