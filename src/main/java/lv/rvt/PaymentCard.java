@@ -14,7 +14,6 @@ public class PaymentCard {
     public void eatAffordably() {
         if (this.balance - 2.60 >= 0) {
             this.balance = this.balance - 2.60;
-            
         }
     }
     
