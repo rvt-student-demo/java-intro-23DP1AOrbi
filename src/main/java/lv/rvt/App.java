@@ -10,35 +10,63 @@ public class App
 {
     public static void main( String[] args ) {
 
-        // System.out.println(1%2);
+        PaymentCard Paul = new PaymentCard(20);
+        PaymentCard Matt = new PaymentCard(30);
 
-        Scanner Scan = new Scanner(System.in);
+        Paul.eatHeartily();
+        Matt.eatAffordably();
+        System.out.println("Paul: " + Paul);
+        System.out.println("Matt: " + Matt);
 
-        Statistics stats = new Statistics();
-        Statistics even = new Statistics();
-        Statistics odd = new Statistics();
+        Paul.addMoney(20);
+        Matt.eatHeartily();
+        System.out.println("Paul: " + Paul);
+        System.out.println("Matt: " + Matt);
+
+        Paul.eatAffordably();
+        Paul.eatAffordably();
+        Matt.addMoney(50);
+        System.out.println("Paul: " + Paul);
+        System.out.println("Matt: " + Matt);
+
+
+
+        // PaymentCard card = new PaymentCard(10);
+        // System.out.println("Paul: " + card);
+        // card.addMoney(-15);
+        // System.out.println("Paul: " + card);
+
+
+
+        //////////////////////////
+
+        // Scanner Scan = new Scanner(System.in);
+
+        // Statistics stats = new Statistics();
+        // Statistics even = new Statistics();
+        // Statistics odd = new Statistics();
         
-        while (true) {
-            int num = Integer.valueOf(Scan.nextLine());
+        // while (true) {
+        //     int num = Integer.valueOf(Scan.nextLine());
 
-            if (num == -1) {
-                break;
-            }
+        //     if (num == -1) {
+        //         break;
+        //     }
 
-            if (num % 2 == 1) {
-                odd.addNumber(num);
-            }
+        //     if (num % 2 == 1) {
+        //         odd.addNumber(num);
+        //     }
 
-            if (num % 2 == 0) {
-                even.addNumber(num);
-            }
+        //     if (num % 2 == 0) {
+        //         even.addNumber(num);
+        //     }
 
-            stats.addNumber(num);
-        }
+        //     stats.addNumber(num);
+        // }
 
-        System.out.println("Sum: " +(int)stats.sum());
-        System.out.println("Sum of even numbers: " + (int)even.sum());
-        System.out.println("Sum of odd numbers: " + (int)odd.sum());
+        // System.out.println("Sum: " +(int)stats.sum());
+        // System.out.println("Sum of even numbers: " + (int)even.sum());
+        // System.out.println("Sum of odd numbers: " + (int)odd.sum());
   
 
         // Scanner Scan = new Scanner(System.in);
@@ -52,34 +80,6 @@ public class App
         //     num = num1;
         // }
         // System.out.println((int)stats.sum());
-
-
-
-        // Statistics statistics = new Statistics();
-        // statistics.addNumber(3);
-        // statistics.addNumber(5);
-        // statistics.addNumber(1);
-        // statistics.addNumber(2);
-        // System.out.println("Count: " + statistics.getCount());
-        // System.out.println("Sum: " + statistics.sum());
-        // System.out.println("Average: " + statistics.average());
-    
-
-
-        // Agent bond =  new Agent("James", "Bond");
-
-        // bond.toString(); // prints nothing
-        // System.out.println(bond);
-
-        // Agent ionic = new Agent("Ionic", "Bond");
-        // System.out.println(ionic);
-
-
-        // Person per1 = new Person("Anthony");
-        // per1.setHeight(165);
-        // per1.setWeight(65);
-
-        // System.out.println(per1.bodyMassIndex());
 
 
 
