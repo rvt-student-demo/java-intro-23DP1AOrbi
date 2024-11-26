@@ -11,8 +11,13 @@ public class App {
 
         BufferedReader reader = Helper.getReader("persons.csv");
 
-        String row1 = reader.readLine();
-        System.out.println(row1);
+        // String line = reader.readLine() ;
+        String line;
+
+        reader.readLine(); // Title row - ignorējam pirmo rindu
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
 
         //////////////////////////
 
