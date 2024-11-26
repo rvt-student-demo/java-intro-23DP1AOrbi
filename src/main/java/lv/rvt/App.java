@@ -9,31 +9,16 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-        DecreasingCounter count = new DecreasingCounter(20);
+        BufferedReader reader = Helper.getReader("persons.csv");
 
-        count.printValue();
-        count.decrement();
-        count.printValue();
-        count.decrement(4);
-        count.printValue();
-        count.reset();
-        count.printValue();
-        count.reset(10);
-        count.printValue();
-
-
-
-        // Product tapeMeasure = new Product("Tape measure");
-        // Product plaster = new Product("Plaster", "home improvement section");
-        // Product tyre = new Product("Tyre", 5);
-
-        // System.out.println(tapeMeasure);
-        // System.out.println(plaster);
-        // System.out.println(tyre);
+        String row1 = reader.readLine();
+        System.out.println(row1);
 
         //////////////////////////
 
-        // and -> &&
+        /// comma seperated values
+
+        // and -> &&/workspaces/java-intro-23DP1AOrbi/src/data
         // or -> ||
         // not -> !
 
