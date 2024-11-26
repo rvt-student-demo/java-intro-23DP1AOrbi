@@ -13,11 +13,20 @@ public class App {
 
         // String line = reader.readLine() ;
         String line;
+        int ageSum = 0;
+        int ageCount = 0;
 
         reader.readLine(); // Title row - ignorējam pirmo rindu
         while ((line = reader.readLine()) != null) {
-            System.out.println(line);
+            // System.out.println(line);
+
+            String[] parts = line.split(", ");
+
+            System.out.println("Name: " + parts[0] + ", age: " + parts[1] + ", weight: " + parts[2] + ", height: " + parts[3]);
+            ageSum += Integer.valueOf(parts[1]);
+            ageCount++;
         }
+        System.out.println("Average age: " + (double) ageSum/ageCount);
 
         //////////////////////////
 
