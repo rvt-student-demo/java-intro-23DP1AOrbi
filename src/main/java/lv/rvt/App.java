@@ -9,24 +9,12 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-        BufferedReader reader = Helper.getReader("persons.csv");
+        ArrayList<Person> persons = PersonManager.getPersonList();
 
-        // String line = reader.readLine() ;
-        String line;
-        int ageSum = 0;
-        int ageCount = 0;
-
-        reader.readLine(); // Title row - ignorējam pirmo rindu
-        while ((line = reader.readLine()) != null) {
-            // System.out.println(line);
-
-            String[] parts = line.split(", ");
-
-            System.out.println("Name: " + parts[0] + ", age: " + parts[1] + ", weight: " + parts[2] + ", height: " + parts[3]);
-            ageSum += Integer.valueOf(parts[1]);
-            ageCount++;
+        for (Person person : persons) {
+            System.out.println(person);
         }
-        System.out.println("Average age: " + (double) ageSum/ageCount);
+
 
         //////////////////////////
 

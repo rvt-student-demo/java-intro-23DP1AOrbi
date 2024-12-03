@@ -13,6 +13,10 @@ public class Person {
         this.name = initialName;
     }
 
+    public Person(String initalName) {
+        this.name = initalName;
+    }
+
     public void printPerson() {
         System.out.println(this.name + ", age " + this.age + " years");
     }
@@ -38,7 +42,7 @@ public class Person {
     ////////
     /// 
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return this.name + ", " + this.age + " years old, " +  this.weight + "kg, " + this.height + "cm";
     }
 
     public int returnAge() {
