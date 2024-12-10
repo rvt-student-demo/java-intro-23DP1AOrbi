@@ -6,6 +6,21 @@ public class PaymentCard {
     public PaymentCard(double openingBalance) {
         this.balance = openingBalance;
     }
+    public double balance(){ 
+        return this.balance;
+    }
+    public void addMoney(double increase) {
+        this.balance += increase;
+    }
+    public boolean takeMoney(double amount) {
+        if (this.balance - amount < 0) {
+            return false;
+        }
+        else {
+            this.balance -= amount;
+            return true;
+        }
+    }
 
     public String toString() {
         return "The card has a balance of " + this.balance + " euros" ;
@@ -23,16 +38,16 @@ public class PaymentCard {
         }
     }
 
-    public void addMoney(double amount) {
-        if (this.balance + amount > 150) {
-            this.balance = 150; 
-        }
-        else if (this.balance + amount < 0) {
-            this.balance = this.balance;
-        }
-        else {
-        this.balance += amount;
-        }
+    // public void addMoney(double amount) {
+    //     if (this.balance + amount > 150) {
+    //         this.balance = 150; 
+    //     }
+    //     else if (this.balance + amount < 0) {
+    //         this.balance = this.balance;
+    //     }
+    //     else {
+    //     this.balance += amount;
+    //     }
     }
 
-}
+
