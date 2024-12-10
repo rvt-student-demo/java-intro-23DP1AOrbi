@@ -27,6 +27,7 @@ public class PaymentTerminal {
         }
         else {
             affordableMeals++;
+            this.money += 2.5;
             card.takeMoney(2.5);
             return true;
         }
@@ -37,13 +38,13 @@ public class PaymentTerminal {
         }
         else {
             heartyMeals++;
+            this.money += 4.3;
             card.takeMoney(4.3);
             return true;
         }
     }
     public void addMoneyToCard(PaymentCard card, double sum) {
         card.addMoney(sum);
-        this.money += sum;
     }
 
     public String toString() {
