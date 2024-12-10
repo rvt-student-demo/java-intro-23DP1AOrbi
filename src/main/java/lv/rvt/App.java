@@ -6,28 +6,21 @@ public class App {
     public static void main( String[] args ) throws Exception {
 
         Scanner scan = new Scanner(System.in);
-
-        System.out.println("Hello, choose a command");
-        System.out.println("show - shows all persons");
-        System.out.println("add - add a person");
-        System.out.println("exit - ends program");
-        System.out.println("help - see avaiable commands");
+        boolean isProgramRunning = true;
+        System.out.println("Welcome to person manager, type \"help\" to see available commands.");
 
 
-        while (true) {
-            
-
+        while (isProgramRunning) {
             String command = scan.nextLine();
-
             if (command.equals("exit")) {
-                break;
+                isProgramRunning = false;
             }
-            
             else if (command.equals("show")) {
+                System.out.println("Person lsit: ");
                 ArrayList<Person> persons = PersonManager.getPersonList();
                 for (Person person : persons) {
                     System.out.println(person);
-                }
+                }   
             }
             else if (command.equals("add")) {
                 System.out.println("Please enter name: ");
@@ -36,26 +29,81 @@ public class App {
                 System.out.println("Please enter age: ");
                 int age = Integer.valueOf(scan.nextLine());
 
-                System.out.println("Please enter weight: ");
+                System.out.println("Please enter weight:");
                 int weight = Integer.valueOf(scan.nextLine());
 
-                System.out.println("Please enter height: ");
+                System.out.println("Please enter height:");
                 int height = Integer.valueOf(scan.nextLine());
 
                 Person pers = new Person(name, age, weight, height);
                 PersonManager.addPerson(pers);
-                // break;
+                System.out.println("Person is added");
             }
             else if (command.equals("help")) {
-                System.out.println("Hello, choose a command");
-                System.out.println("show - shows all persons");
-                System.out.println("add - add a person");
-                System.out.println("exit - ends program");
-                System.out.println("help - see avaiable commands");
+                System.out.println("show - show person list");
+                System.out.println("add - add person to persons.csv file");
+                System.out.println("help - show what commands do");
+                System.out.println("exit - exit program");
             }
+            System.out.println();
+            System.out.println("Your command was " + command);
         }
+        System.out.println("thanks, bye bye!");
 
-        System.out.println("Buh bye");
+
+        // Scanner scan = new Scanner(System.in);
+
+        // System.out.println("Hello, choose a command");
+        // System.out.println("show - shows all persons");
+        // System.out.println("add - add a person");
+        // System.out.println("exit - ends program");
+        // System.out.println("help - see avaiable commands");
+
+
+        // while (true) {
+            
+
+        //     String command = scan.nextLine();
+
+        //     if (command.equals("exit")) {
+        //         break;
+        //     }
+            
+        //     else if (command.equals("show")) {
+        //         System.out.println("Person list: ");
+        //         ArrayList<Person> persons = PersonManager.getPersonList();
+        //         for (Person person : persons) {
+        //             System.out.println(person);
+        //         }
+        //     }
+        //     else if (command.equals("add")) {
+        //         // ieraksta personu csv failā 
+        //         System.out.println("Please enter name: ");
+        //         String name = scan.nextLine();
+
+        //         System.out.println("Please enter age: ");
+        //         int age = Integer.valueOf(scan.nextLine());
+
+        //         System.out.println("Please enter weight: ");
+        //         int weight = Integer.valueOf(scan.nextLine());
+
+        //         System.out.println("Please enter height: ");
+        //         int height = Integer.valueOf(scan.nextLine());
+
+        //         Person pers = new Person(name, age, weight, height);
+        //         PersonManager.addPerson(pers);
+        //         System.out.println("Person is saved");
+        //     }
+        //     else if (command.equals("help")) {
+        //         System.out.println("Hello, choose a command");
+        //         System.out.println("show - shows all persons");
+        //         System.out.println("add - add a person");
+        //         System.out.println("exit - ends program");
+        //         System.out.println("help - see avaiable commands");
+        //     }
+        // }
+
+        // System.out.println("Buh bye");
 
 
         
