@@ -16,10 +16,29 @@ public class App {
                 isProgramRunning = false;
             }
             else if (command.equals("show")) {
-                System.out.println("Person lsit: ");
+                System.out.println();
                 ArrayList<Person> persons = PersonManager.getPersonList();
+
+                String name = "Name";
+                String age = "Age";
+                String weight = "Weigth";
+                String height = "Height";
+                String bmi = "Body mass index";
+
+                System.out.printf("%-20s| ", name);
+                System.out.printf("%-5s| ", age);
+                System.out.printf("%-7s| ", weight);
+                System.out.printf("%-7s| ", height);
+                System.out.printf("%-15s |", bmi);
+                System.out.println();
                 for (Person person : persons) {
-                    System.out.println(person);
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.printf("%-20s| ", person.getName());
+                    System.out.printf("%-5d| ", person.getAge());
+                    System.out.printf("%-7d| ", person.getWeight());
+                    System.out.printf("%-7d| ", person.getHeight());
+                    System.out.printf("%-16.2f| ", person.bodyMassIndex());
+                    System.out.println();
                 }   
             }
             else if (command.equals("add")) {

@@ -49,8 +49,14 @@ public class Person {
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
     }
 
-    public int returnAge() {
+    public int getAge() {
         return this.age;
+    }
+    public int getHeight() {
+        return this.height;
+    }
+    public int getWeight() {
+        return this.weight;
     }
     public void setHeight(int newHeight) {
         this.height = newHeight;

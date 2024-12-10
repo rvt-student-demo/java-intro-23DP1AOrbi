@@ -11,13 +11,11 @@ public class PersonManager {
        BufferedReader reader = Helper.getReader("persons.csv");
 
        String line;
-
        reader.readLine();
        while ((line = reader.readLine()) != null) {
-            
-        String[] parts = line.split(", ");
-        Person pers = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
-        persons.add(pers);
+            String[] parts = line.split(", ");
+            Person pers = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
+            persons.add(pers);
        }
        return persons;
     }
