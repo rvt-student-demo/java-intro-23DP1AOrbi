@@ -5,24 +5,45 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
+        // primitivr datu tipu īpašības
+        int x = 5;
+        int y = x;
+        int c = x;
 
-        PaymentCard annesCard = new PaymentCard(2);
+        int value; 
 
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+        // Reference datu tipi
 
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
+        Person pers1 = new Person("John");
 
-        unicafeExactum.addMoneyToCard(annesCard, 100);
+        Person pers2 = pers1; // paņem pers1 adresi
+        Person pers3 = pers2; // visi adresējās uz pers1 adresi
 
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
+        pers1.setName("Harry"); // vārds nomainās visiesm jo visi attiecas uz vienu adresi
 
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+        System.out.println(pers1);
 
-        System.out.println(unicafeExactum);
+        Person pers4 = new Person("Joe"); // izveido jaunu adresi
+
+
+        // PaymentTerminal unicafeExactum = new PaymentTerminal();
+        // System.out.println(unicafeExactum);
+
+        // PaymentCard annesCard = new PaymentCard(2);
+
+        // System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+
+        // boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+
+        // unicafeExactum.addMoneyToCard(annesCard, 100);
+
+        // wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+
+        // System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+
+        // System.out.println(unicafeExactum);
 
         
         // izvada csv failu
