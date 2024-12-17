@@ -5,7 +5,10 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    // Glabā saiti uz citu objektu
     private SimpleDate birthday;
+
+    //overloading
 
     public Person(String initialName, int initialAge, int initialHeight, int initialWeight) {
         this.age = initialAge;
@@ -22,6 +25,8 @@ public class Person {
         this(initalName, 0, 0, 0);
         this.birthday = date;
     }
+
+    
 
     public void printPerson() {
         System.out.println(this.name + ", age " + this.age + " years");

@@ -5,47 +5,18 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-        // primitivr datu tipu īpašības
-        int x = 5;
-        int y = x;
-        int c = x;
+        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-        int value; 
-
-        // Reference datu tipi
-
-        Person pers1 = new Person("John");
-
-        Person pers2 = pers1; // paņem pers1 adresi
-        Person pers3 = pers2; // visi adresējās uz pers1 adresi
-
-        pers1.setName("Harry"); // vārds nomainās visiesm jo visi attiecas uz vienu adresi
-
-        System.out.println(pers1);
-
-        Person pers4 = new Person("Joe"); // izveido jaunu adresi
+        System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
+        System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
 
 
-        // PaymentTerminal unicafeExactum = new PaymentTerminal();
-        // System.out.println(unicafeExactum);
+        // SimpleDate date = new SimpleDate(0, 0, 2000);
 
-        // PaymentCard annesCard = new PaymentCard(2);
+        // Person person = new Person("John", date);
 
-        // System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        // boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        // System.out.println("there was enough money: " + wasSuccessful);
-
-        // unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        // wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        // System.out.println("there was enough money: " + wasSuccessful);
-
-        // System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        // System.out.println(unicafeExactum);
-
-        
         // izvada csv failu
         // ArrayList<Person> persons = PersonManager.getPersonList();
 
