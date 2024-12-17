@@ -5,17 +5,16 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-
-
-        SimpleDate date1 = new SimpleDate(1, 0, 0);
-        SimpleDate date2 = new SimpleDate(1, 0, 0);
-
-        Person person = new Person("Jack");
-
+        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
         
-        System.out.println(date1.equals(date2));
+        System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
+        System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
 
-        // Person person = new Person("John", date);
+        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
+        System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
+
 
         // izvada csv failu
         // ArrayList<Person> persons = PersonManager.getPersonList();
@@ -24,7 +23,7 @@ public class App {
         //     System.out.println(person);
         // }
 
-
+        
         //////////////////////////
 
         /// comma seperated values
