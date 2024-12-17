@@ -23,29 +23,50 @@ public class SimpleDate {
         return this.year;
     }
 
-    public boolean equals(Object compared) {
-        // if the variables are located in the same position, they are equal
-        if (this == compared) {
+    // public boolean equals(Object compared) {
+    //     // if the variables are located in the same position, they are equal
+    //     if (this == compared) {
+    //         return true;
+    //     }
+
+    //     // if the type of the compared object is not SimpleDate, the objects are not equal
+    //     if (!(compared instanceof SimpleDate)) {
+    //         return false;
+    //     }
+
+    //     // convert the Object type compared object
+    //     // into a SimpleDate type object called comparedSimpleDate
+    //     SimpleDate comparedSimpleDate = (SimpleDate) compared;
+
+    //     // if the values of the object variables are the same, the objects are equal
+    //     if (this.day == comparedSimpleDate.day &&
+    //         this.month == comparedSimpleDate.month &&
+    //         this.year == comparedSimpleDate.year) {
+    //         return true;
+    //     }
+
+    //     // otherwise the objects are not equal
+    //     return false;
+    // }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
             return true;
         }
-
-        // if the type of the compared object is not SimpleDate, the objects are not equal
-        if (!(compared instanceof SimpleDate)) {
+        
+        if (object instanceof SimpleDate == false) {
             return false;
         }
-
-        // convert the Object type compared object
-        // into a SimpleDate type object called comparedSimpleDate
-        SimpleDate comparedSimpleDate = (SimpleDate) compared;
-
-        // if the values of the object variables are the same, the objects are equal
-        if (this.day == comparedSimpleDate.day &&
-            this.month == comparedSimpleDate.month &&
-            this.year == comparedSimpleDate.year) {
-            return true;
-        }
-
-        // otherwise the objects are not equal
+        SimpleDate comparedObject = (SimpleDate) object;
+        
+        if (
+            this.day == comparedObject.getDay() &&
+            this.month == comparedObject.getMonth() &&
+            this.year == comparedObject.getYear()) 
+            {
+                return true;
+            }
         return false;
     }
 

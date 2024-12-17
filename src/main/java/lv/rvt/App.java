@@ -5,15 +5,15 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
-
-        System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
-        System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
 
 
-        // SimpleDate date = new SimpleDate(0, 0, 2000);
+        SimpleDate date1 = new SimpleDate(1, 0, 0);
+        SimpleDate date2 = new SimpleDate(1, 0, 0);
+
+        Person person = new Person("Jack");
+
+        
+        System.out.println(date1.equals(date2));
 
         // Person person = new Person("John", date);
 
