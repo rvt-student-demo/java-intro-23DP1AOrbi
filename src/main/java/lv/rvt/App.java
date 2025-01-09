@@ -5,16 +5,20 @@ import java.util.*;
 public class App {
     public static void main( String[] args ) throws Exception {
 
-        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
-        
-        System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
-        System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
+        Box box = new  Box( 2.5, 5.0, 6.0 ) ;
 
-        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
-        System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
+        System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+        Box box1 = new Box(box);
+        Box box2 = new Box(box);
+        Box box3 = box2.biggerBox(box1);
+        System.out.println( "Area: "  + box3.area() + " volume: " + box3. volume() );
+        System.out.println("Lenght: " + box3.lenght() + " Width: " + box3.width() + " Height: " + box3.height());
+        Box box4 = box1.smallerBox(box);
+        System.out.println( "Area: "  + box4.area() + " volume: " + box4. volume() );
+        System.out.println("Lenght: " + box4.lenght() + " Width: " + box4.width() + " Height: " + box4.height());
+        System.out.println("Lenght: " + box1.lenght() + " Width: " + box1.width() + " Height: " + box1.height());
 
+        System.out.println(box4.nests(box));
 
         // izvada csv failu
         // ArrayList<Person> persons = PersonManager.getPersonList();
