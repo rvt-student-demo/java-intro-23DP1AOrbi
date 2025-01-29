@@ -1,5 +1,7 @@
 package lv.rvt;
 
+import java.util.ArrayList;
+
 public class Person {
     private String name;
     private int age;
@@ -105,5 +107,7 @@ public class Person {
         return (this.name + "\n    "
         + this.adress);
     }
+
+    
 
 }
