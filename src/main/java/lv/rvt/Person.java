@@ -5,10 +5,17 @@ public class Person {
     private int age;
     private int weight;
     private int height;
-    // Glabā saiti uz citu objektu
-    private SimpleDate birthday;
 
-    //overloading
+    private String adress;
+
+
+    public Person(String initialName, int initialAge, int initialHeight, int initialWeight, String initailAdress) {
+        this.age = initialAge;
+        this.weight = initialWeight;
+        this.height = initialHeight;
+        this.name = initialName;
+        this.adress = initailAdress;
+    }
 
     public Person(String initialName, int initialAge, int initialHeight, int initialWeight) {
         this.age = initialAge;
@@ -21,12 +28,15 @@ public class Person {
         this.name = initalName;
     }
 
-    public Person(String initalName, SimpleDate date) {
-        this(initalName, 0, 0, 0);
-        this.birthday = date;
+    public Person(String initalName, int age) {
+        this(initalName, 0, 0, 0, "unknown");
     }
 
-    
+
+    public Person(String name, String adress) {
+        this(name, 0, 0, 0, adress);
+    }
+
 
     public void printPerson() {
         System.out.println(this.name + ", age " + this.age + " years");
@@ -52,9 +62,9 @@ public class Person {
     }
     ////////
     /// 
-    public String toString() {
-        return this.name + ", " + this.age + " years old, " +  this.weight + "kg, " + this.height + "cm";
-    }
+    // public String toString() {
+    //     return this.name + ", " + this.age + " years old, " +  this.weight + "kg, " + this.height + "cm";
+    // }
 
     public String toCsvRow() {
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
@@ -87,6 +97,13 @@ public class Person {
     }
     public void setName(String nameNow) {
         this.name = nameNow;
+    }
+
+
+
+    public String toString() {
+        return (this.name + "\n    "
+        + this.adress);
     }
 
 }

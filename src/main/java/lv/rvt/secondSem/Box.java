@@ -1,4 +1,4 @@
-package lv.rvt;
+package lv.rvt.secondSem;
 
 public class Box {
     private double width;
@@ -6,10 +6,10 @@ public class Box {
     private double length;
     private double side;
 
-    public Box(double width, double height, double lenght) {
+    public Box(double width, double height, double length) {
         this.width = width;
         this.height = height;
-        this.length = lenght;
+        this.length = length;
     }
 
     public Box(double side) {
@@ -47,7 +47,7 @@ public class Box {
         this.length = oldBox.length;
     }
     
-    public double lenght() {
+    public double length() {
         return this.length;
     }
 
@@ -65,14 +65,14 @@ public class Box {
         return new Box(
              1.25*oldBox.width(), 
              1.25*oldBox.height(),
-             1.25*oldBox.lenght());
+             1.25*oldBox.length());
     }
 
     public Box smallerBox(Box oldBox) {
         return new Box(
              0.75*oldBox.width(), 
              0.75*oldBox.height(),
-             0.75*oldBox.lenght());
+             0.75*oldBox.length());
     }
 
     /// Exercise 5
