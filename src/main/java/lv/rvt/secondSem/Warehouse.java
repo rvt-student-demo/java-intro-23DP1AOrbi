@@ -1,4 +1,4 @@
-package lv.rvt;
+package lv.rvt.secondSem;
 
 public class Warehouse {
     private double capacity;
@@ -11,6 +11,7 @@ public class Warehouse {
         else {
             this.capacity = 0.0;
         }
+        
         this.balance = 0.0;
     }
 
@@ -36,7 +37,7 @@ public class Warehouse {
         else {
             this.balance = this.capacity;
         }
-    }
+    } 
 
     public double takeFromWarehouse(double amount) {
         if (amount < 0) {

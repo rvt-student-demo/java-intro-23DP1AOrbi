@@ -1,4 +1,4 @@
-package lv.rvt;
+package lv.rvt.secondSem;
 
 public class ProductWarehouse extends Warehouse {
     private String name;
