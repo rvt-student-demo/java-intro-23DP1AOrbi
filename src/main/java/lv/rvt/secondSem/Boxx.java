@@ -15,7 +15,7 @@ public class Boxx implements Packable {
         double currentWeight = weight();
         if (this.capacity > currentWeight + weightable.weight()) {
             this.weightable.add(weightable);
-        }
+        } 
     }
 
     public double weight() {
